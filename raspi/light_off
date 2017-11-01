@@ -1,0 +1,4 @@
+#/bin/bash
+GPIO="/usr/local/bin/gpio"
+$GPIO -g mode 24 out
+$GPIO -g write 24 0

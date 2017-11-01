@@ -1,0 +1,11 @@
+#/bin/bash
+GPIO="/usr/local/bin/gpio"
+$GPIO -g mode 4 in
+$GPIO -g mode 4 up
+if test `$GPIO -g read 4` -eq '0'	# inverted input
+	then echo "*** Well Pump is pumping Water ***"
+		exit 1
+	else echo "*** Well Pump is off ***"
+		exit 0
+fi
+

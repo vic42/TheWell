@@ -1,0 +1,5 @@
+modprobe w1-gpio gpiopin=25
+modprobe w1-therm
+sleep 2
+ls -la /sys/bus/w1/devices/
+

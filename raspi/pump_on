@@ -1,0 +1,6 @@
+#/bin/bash
+logger "PUMP STARTED BY $1"
+GPIO="/usr/local/bin/gpio"
+$GPIO -g mode 17 out
+$GPIO -g mode 17 down
+$GPIO -g write 17 1
